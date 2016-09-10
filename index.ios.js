@@ -14,10 +14,12 @@ import {
 } from 'react-native';
 
 class iHaveToTakeThis extends Component {
-  
+
   // setup eventListener
   // 1st Sequence: wait 30 seconds then
   // send phone call
+
+  // binding the function with 'this' which is connected to the class
   onSaveMeClick = () => {
       console.log("We're in the function")
   }
