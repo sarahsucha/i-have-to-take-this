@@ -9,23 +9,28 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableHighlight
 } from 'react-native';
 
 class iHaveToTakeThis extends Component {
+  
+  // setup eventListener
+  // 1st Sequence: wait 30 seconds then
+  // send phone call
+  onSaveMeClick = () => {
+      console.log("We're in the function")
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <TouchableHighlight onPress={this.onSaveMeClick}>
+          <Text style={styles.welcome}>
+            Get me out of this conversation!
+          </Text>
+        </TouchableHighlight>
+
       </View>
     );
   }
