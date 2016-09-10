@@ -12,6 +12,8 @@ import {
   View,
   TouchableHighlight
 } from 'react-native';
+import PhoneService from './services/phone.js';
+
 
 class iHaveToTakeThis extends Component {
 
@@ -22,6 +24,8 @@ class iHaveToTakeThis extends Component {
   // binding the function with 'this' which is connected to the class
   onSaveMeClick = () => {
       console.log("We're in the function")
+
+      PhoneService()
   }
 
   render() {

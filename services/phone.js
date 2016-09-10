@@ -1,8 +1,9 @@
 // this creates a new variable called twilio from twilio node module.
 import twilio from 'twilio';
+import config from '../env.js';
 
-var accountSid = 'AC79d9d9772702a0d82fd839ab06867f3c';
-var authToken = ENV[AATWILIO];
+var accountSid = config.twilio.accountSID;
+var authToken = config.twilio.authToken;
 
 class PhoneService {
   constructor() {
