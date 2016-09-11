@@ -1,22 +1,15 @@
 // this creates a new variable called twilio from twilio node module.
-import twilio from 'twilio';
-import config from '../env.js';
-
-var accountSid = config.twilio.accountSID;
-var authToken = config.twilio.authToken;
 
 class PhoneService {
-  constructor() {
-    this.client = twilio(accountSid, authToken)
-  }
+
   makeCall(){
-  client.calls.create({
-      url: "http://demo.twilio.com/docs/voice.xml",
-      to: "+14155397005",
-      from: "+16502156875"
-    }, function(err, call) {
-      process.stdout.write(call.sid);
-    });
+    fetch('http://localhost:3000/call', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
   }
 }
 
