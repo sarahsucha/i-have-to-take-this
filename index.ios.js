@@ -14,9 +14,13 @@ import {
 } from 'react-native';
 import PhoneService from './services/phone.js';
 
-
 class iHaveToTakeThis extends Component {
 
+  constructor(props){
+    super(props),
+    this.phoneService = new PhoneService(),
+    console.log("in the constructor")
+  }
   // setup eventListener
   // 1st Sequence: wait 30 seconds then
   // send phone call
@@ -24,8 +28,7 @@ class iHaveToTakeThis extends Component {
   // binding the function with 'this' which is connected to the class
   onSaveMeClick = () => {
       console.log("We're in the function")
-
-      PhoneService()
+      this.phoneService.makeCall()
   }
 
   render() {

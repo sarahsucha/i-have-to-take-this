@@ -11,7 +11,9 @@ class PhoneService {
       }
     })
   }
+
 }
+export default PhoneService
 
 // Download the Node helper library from twilio.com/docs/node/install
 // These vars are your accountSid and authToken from twilio.com/user/account
